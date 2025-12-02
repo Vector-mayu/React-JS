@@ -40,9 +40,13 @@ document.querySelector('body').style.backgroundColor = 'black';
 // Pro (Actual React Way)
 
 const element = React.createElement('h1', {id:'first', className:'hehe', style:{backgroundColor:'green',fontSize:'2rem'}}, "Mayuresh");
+const element2 = React.createElement('h1',{id:'second', className:'hey', style:{backgroundColor:'red',fontSize:'2rem'}}, "F1");
 
 const Reactroot = ReactDOM.createRoot(document.getElementById('root'));
 Reactroot.render(element);
+Reactroot.render(element2);
+
+// here 2 Elements gets Overlapped on Each other
 
 
 

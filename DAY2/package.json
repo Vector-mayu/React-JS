@@ -1,0 +1,24 @@
+{
+  "name": "reactmayu",
+  "version": "1.0.0",
+  "description": "\"Learning React\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vector-mayu/React-JS.git"
+  },
+  "author": "Mayuresh Dandeker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vector-mayu/React-JS/issues"
+  },
+  "homepage": "https://github.com/Vector-mayu/React-JS#readme",
+  "dependencies": {
+    "parcel": "^2.16.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}
