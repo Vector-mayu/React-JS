@@ -1,0 +1,1 @@
+props -> we pass arguments they get converted into object and prop catches it 
