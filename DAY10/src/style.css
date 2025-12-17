@@ -1,0 +1,25 @@
+body{
+	height: 100vh;
+	width: 100vw;
+	background-color: aqua;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card{
+	height: 30vh;
+	width: 500px;
+	background-color: yellow;
+	text-align: center;
+	border: 2px solid black;
+	border-radius: 1rem;
+	padding: 1rem;
+}
+
+button{
+	height: 2rem;
+	width: 120px;
+	margin-right: 1rem;
+	font-size: large;
+}
