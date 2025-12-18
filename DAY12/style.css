@@ -1,0 +1,13 @@
+nav{
+	font-size: xx-large;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+}
+
+.Routes{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
