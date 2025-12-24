@@ -6,7 +6,6 @@ export default function Counting(){
 	const Count = useSelector((state)=> state.slice1.count);
 	const Dispatch = useDispatch();
 
-	console.log(Increment());
 
 	return(
 		<>

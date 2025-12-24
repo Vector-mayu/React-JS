@@ -1,0 +1,17 @@
+{
+  "name": "day15",
+  "version": "1.0.0",
+  "description": "Button Click\r    ↓\r dispatch(action)\r    ↓\r Reducer\r    ↓\r New State\r    ↓\r Store Update\r    ↓\r useSelector detects change\r    ↓\r Component re-render",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mayu",
+  "license": "ISC",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
+    "parcel": "^2.16.3",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-redux": "^9.2.0"
+  }
+}
