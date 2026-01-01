@@ -1,16 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./Components/Header";
-import FoodOption from "./Components/FoodOption.jsx"
-import InstaOptions from "./Components/InstaOptions.jsx";
-
+import Home from "./Components/Home";
+import {BrowserRouter, Routes, Route} from "react-router";
+import RestaurantOption from "./Components/RestaurantOption";
 
 function App(){
 	return(
 		<>
-			<Header></Header>
-			<FoodOption></FoodOption>
-			<InstaOptions></InstaOptions>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Home></Home>}></Route>
+					<Route path="/restaurant" element={<RestaurantOption/>}></Route>
+				</Routes>
+			</BrowserRouter>
 		</>
 	)
 }
