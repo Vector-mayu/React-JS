@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmer";
+import { Link } from "react-router";
 
 export default function RestaurantOption(){
    
@@ -19,11 +21,19 @@ export default function RestaurantOption(){
      fetchData();
     },[])
 
-    // console.log(RestData);
+    if(RestData.length == 0){
+        return <Shimmer></Shimmer>
+    }
+
 
     return (
         <div className="relative">
-			<div className="max-w-[80%] mx-auto mt-20">
+			<div className="w-[80%] mx-auto mt-15">
+
+                <Link to="/">
+                    <div className="h-10 w-20 bg-[#ff5200] mb-5 flex justify-center items-center">Back</div>
+                </Link>
+
 				<h2 className="text-xl font-bold mb-6">Top restaurant chains in Mumbai</h2>
         		<div className="flex gap-10 flex-nowrap overflow-x-auto">
             		{
@@ -32,9 +42,9 @@ export default function RestaurantOption(){
         		</div>
 			</div>
 
-            <hr className="max-w-[80%] mx-auto mt-14" />
+            <hr className="w-[80%] mx-auto mt-14" />
 
-            <div className="max-w-[80%] mx-auto mt-8">
+            <div className="w-[80%] mx-auto mt-8">
 				<h2 className="text-xl font-bold mb-6">Restaurants with online food delivery in Mumbai</h2>
         		<div className="flex gap-10 flex-wrap">
             		{

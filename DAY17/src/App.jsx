@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Home from "./Components/Home";
 import {BrowserRouter, Routes, Route} from "react-router";
+import Home from "./Components/Home";
 import RestaurantOption from "./Components/RestaurantOption";
+import RestaurantMenu from "./Components/RestaurantMenu";
 
 function App(){
 	return(
@@ -11,6 +12,7 @@ function App(){
 				<Routes>
 					<Route path="/" element={<Home></Home>}></Route>
 					<Route path="/restaurant" element={<RestaurantOption/>}></Route>
+					<Route path="/city/thane/:id" element={<RestaurantMenu></RestaurantMenu>}></Route>
 				</Routes>
 			</BrowserRouter>
 		</>
