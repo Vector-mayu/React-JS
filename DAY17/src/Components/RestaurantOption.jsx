@@ -31,7 +31,7 @@ export default function RestaurantOption(){
 			<div className="w-[80%] mx-auto mt-15">
 
                 <Link to="/">
-                    <div className="h-10 w-20 bg-[#ff5200] mb-5 flex justify-center items-center">Back</div>
+                    <div className="h-10 w-20 text-white font-bold bg-[#ff5200] rounded-2xl mb-5 flex justify-center items-center">Back</div>
                 </Link>
 
 				<h2 className="text-xl font-bold mb-6">Top restaurant chains in Mumbai</h2>
