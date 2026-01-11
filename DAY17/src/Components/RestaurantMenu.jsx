@@ -5,9 +5,12 @@ import MenuCard from "./MenuCard";
 export default function RestaurantMenu(){
 
 	let {id} = useParams();
-	console.log(id);
+	// console.log(id);
 
-	const [RestData, setRestData] = useState([])
+	const [RestData, setRestData] = useState([]);
+	const [Selected, setSelected] = useState(null);
+
+	console.log(Selected);
 	
 	useEffect(()=>{
 		
@@ -25,14 +28,28 @@ export default function RestaurantMenu(){
 		 fetchData();
 		},[])
 
-		console.log(RestData); // Restdata = array elements containing all options in menu with title
+		// console.log(RestData); // Restdata = array elements containing all options in menu with title
 	return(
-		<>
+		<div className="">
+
+			<div className="w-[60%] mx-auto pt-10">
+
+				<button className={`w-30 text-xl border py-2 px-4 rounded-3xl mr-4 border-gray-400 font-bold ${Selected=='veg'?'bg-green-500':'bg-gray-100'}`} 
+				onClick={()=>setSelected(Selected==='veg'?null:'veg')}>
+				Veg
+				</button>
+
+				<button className={`w-30 text-xl border py-2 px-4 rounded-3xl mr-4 border-gray-400 font-bold ${Selected=='nonveg'?'bg-[#fA3C5A]':'bg-gray-100'}`} 
+				onClick={()=> setSelected(Selected==='nonveg'?null:'nonveg')}>
+				Non-Veg
+				</button>
+
+			</div>
 			<div className="w-[60%] mx-auto ">
 				{
-					RestData.map((MenuItems)=> <MenuCard key={MenuItems?.card?.card?.title} MenuItems={MenuItems?.card?.card}></MenuCard>)
+					RestData.map((MenuItems)=> <MenuCard key={MenuItems?.card?.card?.title} FoodSelected={Selected} MenuItems={MenuItems?.card?.card}></MenuCard>)
 				}
 			</div>
-		</>	
+		</div>	
 	)
 }
