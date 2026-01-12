@@ -13,7 +13,7 @@ export default function MenuCard({MenuItems, FoodSelected}){
 
 				<div>
 					{
-						MenuItems?.categories?.map((Items)=> <MenuCard key={Items?.title} MenuItems={Items} ></MenuCard>)
+						MenuItems?.categories?.map((Items)=> <MenuCard key={Items?.title} MenuItems={Items} FoodSelected={FoodSelected}></MenuCard>)
 					}
 				</div>
 			</div>
@@ -23,17 +23,17 @@ export default function MenuCard({MenuItems, FoodSelected}){
 	if(!IsOpen) // Dropdown
     {
         return(
-            <div className="w-full mt-14">
+            <div className="w-full my-5">
                 <div className="flex justify-between w-full">
                     <p className="text-2xl font-bold ">{MenuItems.title}</p>
                     <button className="text-3xl mr-10" onClick={()=> setIsOpen(!IsOpen)}>{IsOpen? `▾`:`▴`}</button>
                 </div>
-                <div className="h-4 bg-gray-200 w-full"></div>
+                <div className="h-4 bg-gray-200 w-full mt-5"></div>
             </div>
         )
     }
 
-	if(FoodSelected == 'veg'){ // veg
+	if(FoodSelected === 'veg'){ // veg
 		return(
 			<div className="w-full mt-15 mb-15">
 
@@ -54,26 +54,26 @@ export default function MenuCard({MenuItems, FoodSelected}){
 		)
 	}
 
-	// if(FoodSelected === 'nonveg'){ // non-veg
-	// 	return(
-	// 		<div className="w-full mt-15 mb-15">
+	if(FoodSelected === 'nonveg'){ // non-veg
+		return(
+			<div className="w-full mt-15 mb-15">
 
-	// 		<div className="flex justify-between w-full">
-	// 		    <p className="text-2xl font-bold ">{MenuItems.title}</p>
-    //             <button className="text-3xl mr-10" onClick={()=> setIsOpen(!IsOpen)}>{IsOpen? `▾`:`▴`}</button>
-    //         </div>
+			<div className="flex justify-between w-full">
+			    <p className="text-2xl font-bold ">{MenuItems.title}</p>
+                <button className="text-3xl mr-10" onClick={()=> setIsOpen(!IsOpen)}>{IsOpen? `▾`:`▴`}</button>
+            </div>
 
-	// 		<div>
-	// 			{
-	// 				MenuItems?.itemCards?.filter((FoodType)=>  in FoodType?.card?.info )?.map((Items) => <CuisineCard key={Items?.card?.info?.id} Items={Items?.card?.info}></CuisineCard>)
-	// 			}
-	// 		</div>
+			<div>
+				{
+					MenuItems?.itemCards?.filter(FoodType => !('isVeg' in FoodType?.card?.info))?.map((Items) => <CuisineCard key={Items?.card?.info?.id} Items={Items?.card?.info}></CuisineCard>)
+				}
+			</div>
 
-    //         <div className="h-4 bg-gray-200 w-full"></div>
+            <div className="h-4 bg-gray-200 w-full"></div>
 
-	// 	</div>
-	// 	)
-	// } 
+		</div>
+		)
+	} 
 
 	return(	
 		<div className="w-full mt-15 mb-15">
@@ -89,7 +89,7 @@ export default function MenuCard({MenuItems, FoodSelected}){
 				}
 			</div>
 
-            <div className="h-4 bg-gray-200 w-full"></div>
+            <div className="h-4 bg-gray-200 w-full mt-5"></div>
 
 		</div>
 	)

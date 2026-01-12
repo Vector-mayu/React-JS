@@ -44,8 +44,11 @@ export default function RestaurantMenu(){
 				Non-Veg
 				</button>
 
+				<hr className="my-8 text-gray-300" />
+
 			</div>
 			<div className="w-[60%] mx-auto ">
+				<div className="h-4 bg-gray-200 w-full mt-5"></div>
 				{
 					RestData.map((MenuItems)=> <MenuCard key={MenuItems?.card?.card?.title} FoodSelected={Selected} MenuItems={MenuItems?.card?.card}></MenuCard>)
 				}
