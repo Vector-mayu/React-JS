@@ -1,5 +1,6 @@
 import { useParams } from "react-router"
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 import MenuCard from "./MenuCard";
 
 export default function RestaurantMenu(){
@@ -30,7 +31,13 @@ export default function RestaurantMenu(){
 
 		// console.log(RestData); // Restdata = array elements containing all options in menu with title
 	return(
-		<div className="">
+		<div className="mt-10">
+
+			<div className="w-[60%] mx-auto">
+				<Link to={`/city/thane/${id}/search`}>
+                	<p className="w-full h-12 py-7 text-xl flex justify-center items-center bg-gray-200 rounded-xl text-gray-500 font-bold">Search for dishes</p>
+				</Link>
+			</div>
 
 			<div className="w-[60%] mx-auto pt-10">
 
@@ -48,10 +55,10 @@ export default function RestaurantMenu(){
 
 			</div>
 			<div className="w-[60%] mx-auto ">
-				<div className="h-4 bg-gray-200 w-full mt-5"></div>
 				{
 					RestData.map((MenuItems)=> <MenuCard key={MenuItems?.card?.card?.title} FoodSelected={Selected} MenuItems={MenuItems?.card?.card}></MenuCard>)
 				}
+				<div className="h-4 bg-gray-200 w-full mt-5"></div>
 			</div>
 		</div>	
 	)

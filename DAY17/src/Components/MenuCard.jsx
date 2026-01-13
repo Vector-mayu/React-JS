@@ -76,7 +76,7 @@ export default function MenuCard({MenuItems, FoodSelected}){
 	} 
 
 	return(	
-		<div className="w-full mt-15 mb-15">
+		<div className="w-full mt-5 mb-15">
 
 			<div className="flex justify-between w-full">
 			    <p className="text-2xl font-bold ">{MenuItems.title}</p>

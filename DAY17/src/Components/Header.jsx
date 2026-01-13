@@ -31,7 +31,6 @@ export default function Header(){
 				</div>
 
 				<div className="max-w-[70%] container mx-auto flex gap-5 mt-6 text-gray-950 relative justify-center">
-					<img className="h-7 absolute top-4 left-48 " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIVcBE3zM44fk8jrHOKRLcjBOF2WCC0iV5Bg&s" alt="" />
 					<input className="bg-white w-[30%] pl-14 pr-6 py-4 text-xl rounded-2xl border" type="text" placeholder="Mumbai, India"></input>
 					<input className="bg-white w-[40%] px-6 py-4 text-xl rounded-2xl" type="text" placeholder="Search for restaurant, item or more"></input>
 				</div>
